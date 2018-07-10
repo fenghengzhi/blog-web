@@ -1,5 +1,9 @@
-module.exports = function override(config, env) {
+const webpack = require('webpack');
 
+
+module.exports = function override(config, env) {
+  config.plugins = config.plugins || [];
+  config.plugins.push(new webpack.ProvidePlugin({ 'window.hljs': 'highlight.js' }));
   // config.devServer = config.devServer || {};
   // config.devServer.proxy = {
   //   '/api': {
