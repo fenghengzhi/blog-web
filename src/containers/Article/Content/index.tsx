@@ -37,7 +37,7 @@ export default class Content extends React.Component<IArticleAttributes> {
       <React.Fragment>
         <Row>
           <Col span={24}>
-            {this.props.title}
+            <h1>{this.props.title}</h1>
           </Col>
         </Row>
         <Row>
